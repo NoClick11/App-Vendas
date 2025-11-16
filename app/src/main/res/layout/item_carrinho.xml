@@ -27,8 +27,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginStart="12dp"
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@drawable/ic_placeholder_joia"
             android:scaleType="centerCrop"
+            android:contentDescription="Foto do item no carrinho"
             app:layout_constraintStart_toEndOf="@id/checkbox_selecionar"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
@@ -43,32 +44,33 @@
             app:layout_constraintStart_toEndOf="@id/img_item_carrinho"
             app:layout_constraintEnd_toStartOf="@id/layout_quantidade"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0">
 
             <TextView
                 android:id="@+id/tv_nome_item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Nome da Joia"
                 android:textColor="@color/black"
                 android:textStyle="bold"
-                android:textSize="16sp" />
+                android:textSize="16sp"
+                tools:text="Nome da Joia" />
 
             <TextView
                 android:id="@+id/tv_valor_item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="R$ 100,00"
                 android:textColor="@color/black"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                tools:text="R$ 100,00" />
 
             <TextView
                 android:id="@+id/tv_tamanho_item"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Tamanho: 15"
                 android:textColor="@color/gray"
-                android:textSize="12sp" />
+                android:textSize="12sp"
+                tools:text="Tamanho: 15" />
         </LinearLayout>
 
         <LinearLayout
@@ -87,6 +89,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@android:drawable/ic_menu_delete"
+                android:contentDescription="Diminuir quantidade"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 app:tint="@color/gray" />
 
@@ -94,18 +97,19 @@
                 android:id="@+id/tv_quantidade"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="1"
                 android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:paddingStart="8dp"
-                android:paddingEnd="8dp" />
+                android:paddingEnd="8dp"
+                tools:text="1" />
 
             <ImageButton
                 android:id="@+id/btn_aumentar"
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:src="@android:drawable/ic_input_add"
+                android:contentDescription="Aumentar quantidade"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 app:tint="@color/black" />
 

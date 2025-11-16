@@ -32,6 +32,10 @@
                     android:layout_height="24dp"
                     android:layout_marginEnd="16dp"
                     android:src="@drawable/ic_shopping_cart"
+                    android:contentDescription="Carrinho de compras"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/icon_menu"
                     app:layout_constraintTop_toTopOf="parent"
@@ -43,6 +47,10 @@
                     android:layout_height="24dp"
                     android:layout_marginEnd="16dp"
                     android:src="@android:drawable/ic_menu_sort_by_size"
+                    android:contentDescription="Menu de navegação"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="?attr/selectableItemBackgroundBorderless"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
@@ -61,6 +69,8 @@
                     android:paddingStart="12dp"
                     android:paddingEnd="12dp"
                     android:textSize="14sp"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toStartOf="@+id/icon_carrinho"
                     app:layout_constraintStart_toStartOf="parent"
@@ -91,21 +101,18 @@
                     android:textSize="18sp"
                     android:textStyle="bold" />
 
-                <HorizontalScrollView
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycler_view_promocoes"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
-                    android:scrollbars="none">
-
-                    <LinearLayout
-                        android:id="@+id/linear_promocoes"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:paddingStart="16dp"
-                        android:paddingEnd="16dp">
-                    </LinearLayout>
-                </HorizontalScrollView>
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:clipToPadding="false"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:itemCount="3"
+                    tools:listitem="@layout/item_promocao" />
 
                 <TextView
                     android:id="@+id/tv_joias_title"
@@ -134,6 +141,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
+                    android:nestedScrollingEnabled="false"
                     android:paddingStart="12dp"
                     android:paddingEnd="12dp"
                     app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
