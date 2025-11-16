@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Itens do Menu do Navigation Drawer (Configuração) -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_tamanho_pulso"
+            android:title="Tamanho Pulso (Dados)" />
+        <item
+            android:id="@+id/nav_numero_dedo"
+            android:title="Número do dedo (Dados)" />
+    </group>
+
+    <item android:title="Ajuda">
+        <menu>
+            <item
+                android:id="@+id/nav_suporte"
+                android:title="Suporte" />
+            <item
+                android:id="@+id/nav_sair"
+                android:title="Sair" />
+        </menu>
+    </item>
+
+</menu>
